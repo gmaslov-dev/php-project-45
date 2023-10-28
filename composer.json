@@ -1,0 +1,19 @@
+{
+    "name": "hexlet/code",
+    "description": "hexlet learning project number 1",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "gmaslov-dev"
+        }
+    ],
+    "bin": [
+        "bin/brain-games"
+    ],
+    "require": {}
+}
