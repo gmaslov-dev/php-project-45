@@ -1,0 +1,53 @@
+#!/usr/bin/env php
+<?php
+
+namespace BrainGames\Cli;
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use function cli\line;
+use function cli\prompt;
+
+function guessNumber()
+{
+    $randNumber = rand(1, 99);
+    $correctAnswer = $randNumber % 2 === 0 ? 'yes' : 'no';
+
+    return [
+        "correctAnswer" => $correctAnswer,
+        "number" => $randNumber
+    ];
+}
+
+function stratGame($attempts = 3)
+{
+    $userName = sayHello();
+    $correctAnswersCount = 0;
+    $attemptsCount = 0;
+
+    line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
+
+    while ($attemptsCount < $attempts) {
+        $gameData = guessNumber();
+
+        line("Question: %d", $gameData['number']);
+        $userAnswer = prompt("Your answer");
+
+        if ($userAnswer !== $gameData['correctAnswer']) {
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $userAnswer, $gameData['correctAnswer']);
+            break;
+        }
+
+        line("Correct!");
+        $correctAnswersCount++;
+        $attemptsCount++;
+    }
+
+    if ($correctAnswersCount === $attempts) {
+        line("Congratulations, %s", $userName);
+    } else {
+        line("Let's try again, %s!", $userName);
+    }
+}
+
+stratGame();
