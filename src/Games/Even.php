@@ -8,9 +8,9 @@ function generateData($count) {
 		$num = random_int(1, 20);
 
 		if ($num % 2 === 0) {
-			$data[] = ['yes' => $num];
+			$data[$i] = ['yes', $num];
 		} else {
-			$data[] = ['no' => $num];
+			$data[$i] = ['no', $num];
 		}
 	}
 	

@@ -31,7 +31,7 @@ function generateData($count) {
         $expression = generateExpression($addition ,$firstNum, $secondNum);
         $answer = getAnswer($addition,$firstNum, $secondNum);
 
-        $data[] = [$expression => $answer];
+        $data[$i] = [$expression, $answer];
     }
 
     return $data;
