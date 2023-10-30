@@ -7,6 +7,9 @@ brain-games:
 
 brain-even:
 	./bin/brain-even
+
+brain-calc:
+	./bin/brain-calc
 # проверка валидности composer.json
 validate:
 	composer validate

@@ -1,11 +1,18 @@
 <?php
 namespace BrainGames\Games\Even;
 
-function generateData() {
-	$num = random_int(1, 20);
+function generateData($count) {
+	$data = [];
 
-	if ($num % 2 === 0) {
-		return ['yes' => $num];
+	for ($i = 0; $i < $count; $i++) {
+		$num = random_int(1, 20);
+
+		if ($num % 2 === 0) {
+			$data[] = ['yes' => $num];
+		} else {
+			$data[] = ['no' => $num];
+		}
 	}
-	return ['no' => $num];
+	
+	return $data;
 }

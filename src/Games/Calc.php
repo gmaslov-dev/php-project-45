@@ -17,17 +17,22 @@ function getAnswer($addition, $firstNum, $secondNum)
     };
 }
 
-function getData() {
+function generateData($count) {
     $additions = ['+', '-', '*'];
+    $data = [];
 
-    $key = array_rand($additions);
-    $addition = $additions[$key];
+    for ($i = 0; $i < $count; $i++) {
+        $key = array_rand($additions);
+        $addition = $additions[$key];
 
-    $firstNum = random_int(1, 30);
-    $secondNum = random_int(1, 10);
+        $firstNum = random_int(1, 30);
+        $secondNum = random_int(1, 10);
 
-    $expression = generateExpression($addition ,$firstNum, $secondNum);
-    $answer = getAnswer($addition,$firstNum, $secondNum);
+        $expression = generateExpression($addition ,$firstNum, $secondNum);
+        $answer = getAnswer($addition,$firstNum, $secondNum);
 
-    return [$expression => $answer];
+        $data[] = [$expression => $answer];
+    }
+
+    return $data;
 }
