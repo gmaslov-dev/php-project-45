@@ -13,3 +13,17 @@ function sayHello()
 
     return $name;
 }
+
+function askQuestion($expression)
+{
+    line("Question: %s", $expression);
+}
+
+function getAnswer()
+{
+    return prompt("Your answer");
+}
+
+
+
+
