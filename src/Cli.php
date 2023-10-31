@@ -7,6 +7,7 @@ use function cli\prompt;
 
 function sayHello(): string
 {
+    line();
     line("Welcome to the Brain Games!");
     $name = prompt('May I have your name?', "", " ");
     line("Hello, %s!", $name);
@@ -16,7 +17,7 @@ function sayHello(): string
 
 function getQuestion($expression): void
 {
-    line("Question %s", $expression);
+    line("Question %s:", $expression);
 }
 
 function setAnswer(): string
