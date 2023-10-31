@@ -2,12 +2,14 @@
 
 namespace BrainGames\Games\Calc;
 
+use Exception;
+
 function generateExpression($addition, $firstNum, $secondNum)
 {
     return "{$firstNum} {$addition} {$secondNum}"; 
 }
 
-function getAnswer($addition, $firstNum, $secondNum)
+function getAnswer($addition, $firstNum, $secondNum): int
 {
     return match ($addition) {
         '+' => $firstNum + $secondNum,
@@ -17,7 +19,7 @@ function getAnswer($addition, $firstNum, $secondNum)
     };
 }
 
-function generateData($count) {
+function generateData($count): array {
     $additions = ['+', '-', '*'];
     $data = [];
 
@@ -25,13 +27,13 @@ function generateData($count) {
         $key = array_rand($additions);
         $addition = $additions[$key];
 
-        $firstNum = random_int(1, 30);
+        $firstNum = ($addition === '*') ? random_int(1, 10) : random_int(1, 30);
         $secondNum = random_int(1, 10);
 
         $expression = generateExpression($addition ,$firstNum, $secondNum);
         $answer = getAnswer($addition,$firstNum, $secondNum);
 
-        $data[$i] = [$expression, $answer];
+        $data[$i] = ['question' => $expression, 'answer' => (string) $answer];
     }
 
     return $data;
