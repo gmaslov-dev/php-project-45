@@ -10,9 +10,17 @@ brain-even:
 
 brain-calc:
 	./bin/brain-calc
+
+brain-gcd:
+	./bin/brain-gcd
 # проверка валидности composer.json
 validate:
 	composer validate
 
 lint:
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
+
+help:
+	$(info brain-even - четное или нечетное)
+	$(info brain-calc - значение выражения)
+	$(info brain-gcd  - поиск НОД)

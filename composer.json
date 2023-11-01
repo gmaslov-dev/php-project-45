@@ -2,22 +2,21 @@
     "name": "hexlet/code",
     "description": "hexlet learning project number 1",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Hexlet\\Code\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "gmaslov-dev"
         }
     ],
     "autoload": {
+        "psr-4": {
+            "Hexlet\\Code\\": "src/"
+        },
         "files": [
             "src/Cli.php",
             "src/Engine.php",
             "src/Games/Calc.php",
-            "src/Games/Even.php"
+            "src/Games/Even.php",
+            "src/Games/Gcd.php"
         ]
     },
     "bin": [
