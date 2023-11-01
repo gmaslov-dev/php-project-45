@@ -1,6 +1,14 @@
 <?php
 
 namespace BrainGames\Games\Gcd;
+
+const GREETING = "Find the greatest common divisor of given numbers.";
+
+function getGreeting(): string
+{
+    return GREETING;
+}
+
 function findGcd($firstNum, $secondNum): int
 {
     $max = ($firstNum > $secondNum) ? $secondNum : $firstNum;

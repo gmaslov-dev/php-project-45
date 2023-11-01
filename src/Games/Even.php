@@ -1,6 +1,13 @@
 <?php
 namespace BrainGames\Games\Even;
 
+const GREETING = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+
+function getGreeting(): string
+{
+    return GREETING;
+}
+
 function generateData($count): array
 {
 	$data = [];

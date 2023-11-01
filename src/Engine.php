@@ -7,9 +7,15 @@ use function BrainGames\Cli\getQuestion;
 use function BrainGames\Cli\setAnswer;
 use function BrainGames\Cli\printMessage;
 
+use function BrainGames\Games\Calc\getGreeting as getCalcGreeting;
+use function BrainGames\Games\Even\getGreeting as getEvenGreeting;
+use function BrainGames\Games\Gcd\getGreeting as getGcdGreeting;
+use function BrainGames\Games\Progression\getGreeting as getProgressionGreeting;
+
 use function BrainGames\Games\Calc\generateData as getCalcData;
 use function BrainGames\Games\Even\generateData as getEvenData;
 use function BrainGames\Games\Gcd\generateData as getGcdData;
+use function BrainGames\Games\Gcd\generateData as getProgressionData;
 
 function generateData($gameType, $rounds = 3): array
 {
@@ -24,9 +30,10 @@ function generateData($gameType, $rounds = 3): array
 function showGameRule($gameType): void
 {
     match($gameType) {
-        'calc' => printMessage('What is the result of the expression?'),
-        'even' => printMessage('Answer "yes" if the number is even, otherwise answer "no".'),
-        'gcd' => printMessage('Find the greatest common divisor of given numbers.'),
+        'calc' => printMessage(getCalcGreeting()),
+        'even' => printMessage(getEvenGreeting()),
+        'gcd' => printMessage(getGcdGreeting()),
+        'progression' => printMessage(getProgressionGreeting()),
         default => null,
     };
 }
