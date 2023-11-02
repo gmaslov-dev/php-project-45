@@ -15,7 +15,7 @@ use function BrainGames\Games\Progression\getGreeting as getProgressionGreeting;
 use function BrainGames\Games\Calc\generateData as getCalcData;
 use function BrainGames\Games\Even\generateData as getEvenData;
 use function BrainGames\Games\Gcd\generateData as getGcdData;
-use function BrainGames\Games\Gcd\generateData as getProgressionData;
+use function BrainGames\Games\Progression\generateData as getProgressionData;
 
 function generateData($gameType, $rounds = 3): array
 {
@@ -23,6 +23,7 @@ function generateData($gameType, $rounds = 3): array
 		'calc' => getCalcData($rounds),
 		'even' => getEvenData($rounds),
         'gcd' => getGcdData($rounds),
+        'progression' => getProgressionData($rounds),
 		default => null,
 	};
 }
