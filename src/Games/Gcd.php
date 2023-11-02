@@ -31,7 +31,7 @@ function generateData($count): array
     $data = [];
 
     for ($i = 0; $i < $count; $i++) {
-        $firstNum =random_int(1, 30);
+        $firstNum = random_int(1, 30);
         $secondNum = random_int(1, 30);
 
         $gcd = findGcd($firstNum, $secondNum);

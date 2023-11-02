@@ -19,7 +19,8 @@ function getAnswer($addition, $firstNum, $secondNum): int
     };
 }
 
-function generateData($count): array {
+function generateData($count): array
+{
     $additions = ['+', '-', '*'];
     $data = [];
 

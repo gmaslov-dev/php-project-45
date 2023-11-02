@@ -21,7 +21,8 @@ function generateProgression($progressionLength, $progressionStep): array
     return $progression;
 }
 
-function hideElement($progression, $hideIndex): array {
+function hideElement($progression, $hideIndex): array
+{
     $progression[$hideIndex] = "..";
 
     return $progression;
