@@ -17,7 +17,7 @@ function sayHello(): string
 
 function getQuestion($expression): void
 {
-    line("Question %s:", $expression);
+    line("Question: %s", $expression);
 }
 
 function setAnswer(): string
