@@ -1,10 +1,10 @@
 #!/usr/bin/env php
 <?php
 
-namespace BrainGames\Bin;
-
 require_once __DIR__ . '/../vendor/autoload.php';
 
+use function BrainGames\Cli\sayHello;
 use function BrainGames\Engine\startGame;
 
-startGame('calc');
+$name = sayHello();
+startGame('calc', $name);

@@ -1,7 +1,8 @@
 #!/usr/bin/env php
 <?php
-namespace BrainGames\Cli;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$userName = sayHello();
+use function BrainGames\Cli\sayHello;
+
+sayHello();

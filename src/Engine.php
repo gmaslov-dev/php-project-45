@@ -48,9 +48,8 @@ function isCorrectAnswer($userAnswer, $correctAnswer): bool
     }
     return false;
 }
-function startGame($gameType): void
+function startGame($gameType, $userName): void
 {
-    $userName = sayHello();
     showGameRule($gameType);
     $data = generateData($gameType);
 
