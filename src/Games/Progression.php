@@ -30,10 +30,11 @@ function generateData(int $count): array
         $progressionStep = random_int(2, 5);
 
         $progression = generateProgression($progressionLength, $progressionStep);
-        $max = count($progression) - 1;
-        $hideIndex = random_int(0, $max);
+        $min = 1;
+        $max = count($progression);
+        $hideIndex = random_int($min, $max);
 
-        $hideProgression = hideElement($progression, $hideIndex);
+        $hideProgression = hideElement($progression, $hideIndex - 1);
         $stringProgression = implode(' ', $hideProgression);
 
         $hiddeElement = (string) $progression[$hideIndex];
