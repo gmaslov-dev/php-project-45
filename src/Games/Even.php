@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Even;
 
-function generateData($count): array
+function generateData(int $count): array
 {
     $data = [];
 

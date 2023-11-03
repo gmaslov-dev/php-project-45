@@ -4,12 +4,12 @@ namespace BrainGames\Games\Prime;
 
 const SIMPLE_LIST = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31];
 
-function isPrime($num): bool
+function isPrime(int $num): bool
 {
-    return in_array($num, SIMPLE_LIST);
+    return in_array($num, SIMPLE_LIST, true);
 }
 
-function generateData($count): array
+function generateData(int $count): array
 {
     $data = [];
 

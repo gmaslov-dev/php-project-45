@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Progression;
 
-function generateProgression($progressionLength, $progressionStep): array
+function generateProgression(int $progressionLength, int $progressionStep): array
 {
     $progression = [];
     $progressionStart = random_int(1, 10);
@@ -14,14 +14,14 @@ function generateProgression($progressionLength, $progressionStep): array
     return $progression;
 }
 
-function hideElement($progression, $hideIndex): array
+function hideElement(array $progression, int $hideIndex): array
 {
     $progression[$hideIndex] = "..";
 
     return $progression;
 }
 
-function generateData($count): array
+function generateData(int $count): array
 {
     $data = [];
 
@@ -30,7 +30,8 @@ function generateData($count): array
         $progressionStep = random_int(2, 5);
 
         $progression = generateProgression($progressionLength, $progressionStep);
-        $hideIndex = random_int(0, count($progression) - 1);
+        $max = count($progression) - 1;
+        $hideIndex = random_int(0, $max);
 
         $hideProgression = hideElement($progression, $hideIndex);
         $stringProgression = implode(' ', $hideProgression);

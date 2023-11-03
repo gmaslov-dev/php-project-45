@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Gcd;
 
-function findGcd($firstNum, $secondNum): int
+function findGcd(int $firstNum, int $secondNum): int
 {
     $max = ($firstNum > $secondNum) ? $secondNum : $firstNum;
 
@@ -14,7 +14,7 @@ function findGcd($firstNum, $secondNum): int
     return 1;
 }
 
-function generateNumbersStr($firstNum, $secondNum): string
+function generateNumbersStr(int $firstNum, int $secondNum): string
 {
     return "{$firstNum} {$secondNum}";
 }

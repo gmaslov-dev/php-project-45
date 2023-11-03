@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Calc;
 
-function getAnswer($addition, $firstNum, $secondNum): int
+function getAnswer(string $addition, int $firstNum, int $secondNum): int
 {
     return match ($addition) {
         '+' => $firstNum + $secondNum,
@@ -12,7 +12,7 @@ function getAnswer($addition, $firstNum, $secondNum): int
     };
 }
 
-function generateData($count): array
+function generateData(int $count): array
 {
     $additions = ['+', '-', '*'];
     $data = [];
