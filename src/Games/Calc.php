@@ -2,13 +2,6 @@
 
 namespace BrainGames\Games\Calc;
 
-const GREETING = "What is the result of the expression?";
-
-function getGreeting(): string
-{
-    return GREETING;
-}
-
 function getAnswer($addition, $firstNum, $secondNum): int
 {
     return match ($addition) {

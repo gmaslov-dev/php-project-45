@@ -32,11 +32,11 @@ function generateData($gameType, $rounds = 3): array
 function showGameRule($gameType): void
 {
     match ($gameType) {
-        'calc' => printMessage(getCalcGreeting()),
-        'even' => printMessage(getEvenGreeting()),
-        'gcd' => printMessage(getGcdGreeting()),
-        'prime' => printMessage(getPrimeGreeting()),
-        'progression' => printMessage(getProgressionGreeting()),
+        'calc' => printMessage("What is the result of the expression?"),
+        'even' => printMessage("Answer \"yes\" if the number is even, otherwise answer \"no\"."),
+        'gcd' => printMessage("Find the greatest common divisor of given numbers."),
+        'prime' => printMessage("Answer \"yes\" if given number is prime. Otherwise answer \"no\"."),
+        'progression' => printMessage("What number is missing in the progression?"),
         default => null,
     };
 }
