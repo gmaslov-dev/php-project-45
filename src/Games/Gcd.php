@@ -19,7 +19,7 @@ function generateNumbersStr(int $firstNum, int $secondNum): string
     return "{$firstNum} {$secondNum}";
 }
 
-function generateData($count): array
+function generateData(int $count): array
 {
     $data = [];
 

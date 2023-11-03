@@ -14,7 +14,7 @@ function sayHello(): string
     return $name;
 }
 
-function getQuestion($expression): void
+function getQuestion(string $expression): void
 {
     line("Question: %s", $expression);
 }
@@ -24,7 +24,7 @@ function setAnswer(): string
     return prompt("Your answer");
 }
 
-function printMessage($message): void
+function printMessage(string $message): void
 {
     line($message);
 }
